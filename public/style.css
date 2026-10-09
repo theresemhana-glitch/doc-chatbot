@@ -1,0 +1,16 @@
+html, body { height: 100%; }
+body { display: flex; flex-direction: column; }
+.app { flex: 1; min-height: 0; }
+main { min-width: 0; }
+@media (min-width: 992px) { #side { width: 300px; flex-shrink: 0; visibility: visible !important; transform: none !important; position: static; } }
+.drop { border: 2px dashed var(--bs-border-color); cursor: pointer; }
+.drop:hover { border-color: var(--bs-primary); }
+.msg { max-width: 85%; margin-bottom: 1rem; }
+.msg .bubble { padding: .6rem .9rem; border-radius: 1rem; white-space: pre-wrap; word-wrap: break-word; }
+.msg.user { margin-left: auto; }
+.msg.user .bubble { background: var(--bs-primary); color: #fff; border-bottom-right-radius: .2rem; }
+.msg.ai .bubble { background: var(--bs-tertiary-bg); border-bottom-left-radius: .2rem; }
+.sources { font-size: .8rem; margin-top: .3rem; }
+.typing span { display: inline-block; width: 8px; height: 8px; margin: 0 2px; border-radius: 50%; background: var(--bs-secondary-color); animation: b 1s infinite; }
+.typing span:nth-child(2) { animation-delay: .15s; } .typing span:nth-child(3) { animation-delay: .3s; }
+@keyframes b { 0%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(-6px); } }
